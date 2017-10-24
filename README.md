@@ -39,7 +39,7 @@ The following changes to resource names have been made.
 |	xSQLServerRSSecureConnectionLevel	|	xSQLRSSecureConnectionLevel	|
 |	xSQLServerScript	|	xSQLScript	|
 |	xSQLServerServiceAccount	|	xSQLServiceAccount	|
-|	xSQLServerSetup	|	xSQLServerSetup	|
+|	xSQLServerSetup	|	xSQLSetup	|
 |	xWaitForAvailabilityGroup	|	xWaitForAvailabilityGroup	|
 
 

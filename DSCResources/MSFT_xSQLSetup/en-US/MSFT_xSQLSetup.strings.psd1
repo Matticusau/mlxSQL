@@ -1,4 +1,4 @@
-# Localized resources for xSQLServerSetup
+# Localized resources for xSQLSetup
 
 ConvertFrom-StringData @'
     UsingPath = Using path '{0}'.

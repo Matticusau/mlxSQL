@@ -1,10 +1,10 @@
 Import-Module -Name (Join-Path -Path (Split-Path -Path (Split-Path -Path $PSScriptRoot -Parent) -Parent) `
-                               -ChildPath 'xSQLServerHelper.psm1')
+-ChildPath 'xSQLHelper.psm1')
 
 Import-Module -Name (Join-Path -Path (Split-Path -Path $PSScriptRoot -Parent) `
-                               -ChildPath 'CommonResourceHelper.psm1')
+-ChildPath 'CommonResourceHelper.psm1')
 
-$script:localizedData = Get-LocalizedData -ResourceName 'MSFT_xSQLServerSetup'
+$script:localizedData = Get-LocalizedData -ResourceName 'MSFT_xSQLSetup'
 
 <#
     .SYNOPSIS
@@ -2125,4 +2125,4 @@ function Start-SqlSetupProcess
     return $sqlSetupProcess.ExitCode
 }
 
-Export-ModuleMember -Function *-TargetResource
+#Export-ModuleMember -Function *-TargetResource

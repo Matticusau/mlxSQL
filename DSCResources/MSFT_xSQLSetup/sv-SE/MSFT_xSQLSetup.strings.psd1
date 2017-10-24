@@ -1,4 +1,4 @@
-# Swedish localized resources for xSQLServerSetup
+# Swedish localized resources for xSQLSetup
 
 ConvertFrom-StringData @'
     UsingPath = Använder sökväg '{0}'.
