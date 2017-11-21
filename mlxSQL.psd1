@@ -1,6 +1,6 @@
 @{
 # Version number of this module.
-ModuleVersion = '8.2.0.3'
+ModuleVersion = '8.2.0.4'
 
 # ID used to uniquely identify this module
 GUID = '74e9ddb5-4cbc-4fa2-a222-2bcfb533fd66'
@@ -40,16 +40,20 @@ PrivateData = @{
         Tags = @('DesiredStateConfiguration', 'DSC', 'DSCResourceKit', 'DSCResource')
 
         # A URL to the license for this module.
-        LicenseUri = 'https://github.com/PowerShell/xSQLServer/blob/master/LICENSE'
+        LicenseUri = 'https://github.com/matticusau/mlxSQL/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://github.com/PowerShell/xSQLServer'
+        ProjectUri = 'https://github.com/matticusau/mlxSQL'
 
         # A URL to an icon representing this module.
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '- Changes to xSQLServer
+        ReleaseNotes = '- IMPORTANT This module is a copy of xSQLServer to work around current issues with
+Azure Automation. Please see README.md in module or github project for more details
+https://github.com/matticusau/mlxSQL
+
+- Changes to xSQLServer
   - Updated appveyor.yml so that integration tests run in order and so that
     the SQLPS module folders are renamed to not disturb the units test, but
     can be renamed back by the integration tests xSQLServerSetup so that the
