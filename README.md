@@ -1,7 +1,6 @@
 # mlxSQL
 
-Modified copy of the **xSQLServer** (version 8.2.0.0) module to work around the problems with usage in Azure Automation documented
-in
+Modified copy of the **xSQLServer** (version 8.2.0.0) module to work around the current known issues with problems with usage in Azure Automation documented in
 [#137](https://github.com/PowerShell/xSQLServer/issues/137)
 [#713](https://github.com/PowerShell/xSQLServer/issues/713)
 [#716](https://github.com/PowerShell/xSQLServer/issues/716)
@@ -10,41 +9,63 @@ The suggestions from [#137](https://github.com/PowerShell/xSQLServer/issues/137)
 
 The following changes to resource names have been made.
 
-|	Original Name	|	New Name	|
-|	----------------------------------	|	----------------------------------	|
-|	xSQLServerAlias	|	xSQLAlias	|
-|	xSQLServerAlwaysOnAvailabilityGroup	|	xSQLAlwaysOnAG	|
-|	xSQLServerAlwaysOnAvailabilityGroupDatabaseMembership	|	xSQLAlwaysOnAGDBMembership	|
-|	xSQLServerAlwaysOnAvailabilityGroupReplica	|	xSQLAlwaysOnAGReplica	|
-|	xSQLServerAlwaysOnService	|	xSQLAlwaysOnService	|
-|	xSQLServerAvailabilityGroupListener	|	xSQLAGListener	|
-|	xSQLServerConfiguration	|	xSQLConfiguration	|
-|	xSQLServerDatabase	|	xSQLDatabase	|
-|	xSQLServerDatabaseOwner	|	xSQLDBOwner	|
-|	xSQLServerDatabasePermission	|	xSQLDBPermission	|
-|	xSQLServerDatabaseRecoveryModel	|	xSQLDBRecoveryModel	|
-|	xSQLServerDatabaseRole	|	xSQLDBRole	|
-|	xSQLServerEndpoint	|	xSQLEndpoint	|
-|	xSQLServerEndpointPermission	|	xSQLEndpointPermission	|
-|	xSQLServerEndpointState	|	xSQLEndpointState	|
-|	xSQLServerFirewall	|	xSQLFirewall	|
-|	xSQLServerLogin	|	xSQLLogin	|
-|	xSQLServerMaxDop	|	xSQLMaxDop	|
-|	xSQLServerMemory	|	xSQLMemory	|
-|	xSQLServerNetwork	|	xSQLNetwork	|
-|	xSQLServerPermission	|	xSQLPermission	|
-|	xSQLServerReplication	|	xSQLReplication	|
-|	xSQLServerRole	|	xSQLRole	|
-|	xSQLServerRSConfig	|	xSQLRSConfig	|
-|	xSQLServerRSSecureConnectionLevel	|	xSQLRSSecureConnectionLevel	|
-|	xSQLServerScript	|	xSQLScript	|
-|	xSQLServerServiceAccount	|	xSQLServiceAccount	|
-|	xSQLServerSetup	|	xSQLSetup	|
-|	xWaitForAvailabilityGroup	|	xWaitForAvailabilityGroup	|
+| Original Name | New Name |
+| ---------------------------------- | ---------------------------------- |
+| xSQLServerAlias | xSQLAlias |
+| xSQLServerAlwaysOnAvailabilityGroup | xSQLAlwaysOnAG |
+| xSQLServerAlwaysOnAvailabilityGroupDatabaseMembership | xSQLAlwaysOnAGDBMembership |
+| xSQLServerAlwaysOnAvailabilityGroupReplica | xSQLAlwaysOnAGReplica |
+| xSQLServerAlwaysOnService | xSQLAlwaysOnService |
+| xSQLServerAvailabilityGroupListener | xSQLAGListener |
+| xSQLServerConfiguration | xSQLConfiguration |
+| xSQLServerDatabase | xSQLDatabase |
+| xSQLServerDatabaseOwner | xSQLDBOwner |
+| xSQLServerDatabasePermission | xSQLDBPermission |
+| xSQLServerDatabaseRecoveryModel | xSQLDBRecoveryModel |
+| xSQLServerDatabaseRole | xSQLDBRole |
+| xSQLServerEndpoint | xSQLEndpoint |
+| xSQLServerEndpointPermission | xSQLEndpointPermission |
+| xSQLServerEndpointState | xSQLEndpointState |
+| xSQLServerFirewall | xSQLFirewall |
+| xSQLServerLogin | xSQLLogin |
+| xSQLServerMaxDop | xSQLMaxDop |
+| xSQLServerMemory | xSQLMemory |
+| xSQLServerNetwork | xSQLNetwork |
+| xSQLServerPermission | xSQLPermission |
+| xSQLServerReplication | xSQLReplication |
+| xSQLServerRole | xSQLRole |
+| xSQLServerRSConfig | xSQLRSConfig |
+| xSQLServerRSSecureConnectionLevel | xSQLRSSecureConnectionLevel |
+| xSQLServerScript | xSQLScript |
+| xSQLServerServiceAccount | xSQLServiceAccount |
+| xSQLServerSetup | xSQLSetup |
+| xWaitForAvailabilityGroup | xWaitForAvailabilityGroup |
+
+## Installation
+
+This module has been published to the PowerShellGallery to make installation easier.
+Particularly if you are using Azure Automation.
+
+To manually install the module, download the source code and unzip the contents
+of the '\Modules\mlxSQL' directory to the
+'$env:ProgramFiles\WindowsPowerShell\Modules' folder.
+
+To install from the PowerShell gallery using PowerShellGet (in PowerShell 5.0) run
+the following command:
+
+```powershell
+Find-Module -Name mlxSQL -Repository PSGallery | Install-Module
+```
+
+To confirm installation, run the below command and ensure you see the SQL Server
+DSC resources available:
+
+```powershell
+Get-DscResource -Module mlxSQL
+```
 
 
-
-
+# Original README.md
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)

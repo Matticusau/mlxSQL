@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+## 8.2.0.6
+
+- Changes to mlxSQL
+  - Reorganised source structure for easier publishing to gallery
+
+## 8.2.0.5
+
+- Changes to mlxSQL
+  - Documentation updates to include Installation from PowerShellGallery
+  - Minor changes to allow use in PowerShellGallery
+
+## 8.2.0.3
+
+- Changes to mlxSQL
+  - Renamed resources to fit within Azure Automation requirements
+
 ## 8.2.0.0
 
 - Changes to xSQLServer
